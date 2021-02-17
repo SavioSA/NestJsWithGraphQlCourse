@@ -7,10 +7,15 @@ export class UpdateUserInput {
   @IsString()
   @IsNotEmpty({ message: 'Este campo deve estar preenchido' })
   @IsOptional()
-  name: string;
+  name?: string;
 
   @IsEmail()
   @IsNotEmpty({ message: 'Este campo deve estar preenchido' })
   @IsOptional()
-  email: string;
+  email?: string;
+  
+  @IsString()
+  @IsNotEmpty({ message: 'Password is required.' })
+  @IsOptional()
+  password?: string;
 }
